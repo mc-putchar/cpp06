@@ -11,13 +11,13 @@
 # **************************************************************************** #
 
 # --- Targets ---
-NAME := convert
+NAME := serialize
 # --- Sources ---
-SRCS := main.cpp ScalarConverter.cpp
+SRCS := main.cpp Serializer.cpp
 # --- Objects ---
 OBJS := $(SRCS:%.cpp=%.o)
 # --- Headers ---
-HDRS := ScalarConverter.hpp
+HDRS := Serializer.hpp
 # --- Compilers ---
 CC := gcc
 CXX := g++
