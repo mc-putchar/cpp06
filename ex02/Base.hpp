@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcutura <mcutura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/25 17:18:22 by mcutura           #+#    #+#             */
-/*   Updated: 2024/05/09 20:05:40 by mcutura          ###   ########.fr       */
+/*   Created: 2023/09/29 00:51:46 by mcutura           #+#    #+#             */
+/*   Updated: 2024/05/09 20:11:10 by mcutura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZER_HPP
-# define SERIALIZER_HPP
+#pragma once
 
-# include <string>
-# include <stdint.h>
+#include <cstdlib>
+#include <iostream>
 
-struct Data
+class Base
 {
-	int			n;
-	std::string	s1;
-	std::string	s2;
-};
-
-class Serializer
-{
-
 	public:
-		static uintptr_t serialize(Data * ptr);
-		static Data * deserialize(uintptr_t raw);
-
-	private:
-		Serializer();
-		Serializer(Serializer const & copy);
-		~Serializer();
-		Serializer & operator=(Serializer const & assign);
+		virtual ~Base() {};
 };
 
-#endif
+class A : public Base {};
+
+class B : public Base {};
+
+class C : public Base {};
+
+
+Base	* generate(void);
+void	identify(Base* p);
+void	identify(Base& p);

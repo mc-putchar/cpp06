@@ -3,22 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcutura <mcutura@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: mcutura <mcutura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 07:04:48 by mcutura           #+#    #+#             */
-/*   Updated: 2023/08/25 07:04:48 by mcutura          ###   ########.fr       */
+/*   Updated: 2024/05/09 13:22:32 by mcutura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCALARCONVERTER_HPP
 # define SCALARCONVERTER_HPP
 
-# include <iostream>
-# include <iomanip>
-# include <string>
+# include <cctype>
 # include <climits>
-# include <cstdlib>
 # include <cmath>
+# include <cstdlib>
+# include <iostream>
+# include <limits>
+# include <sstream>
+# include <string>
 
 class ScalarConverter
 {

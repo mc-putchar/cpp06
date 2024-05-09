@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.cpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcutura <mcutura@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: mcutura <mcutura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/28 10:28:43 by mcutura           #+#    #+#             */
-/*   Updated: 2023/09/29 00:11:41 by mcutura          ###   ########.fr       */
+/*   Created: 2023/09/29 01:10:38 by mcutura           #+#    #+#             */
+/*   Updated: 2024/05/09 20:11:33 by mcutura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
+#include <cstdlib>
+#include <ctime>
 
-uintptr_t Serializer::serialize(Data * ptr)
-{
-	return (reinterpret_cast <uintptr_t> (ptr));
-}
+#include "Base.hpp"
 
-Data * Serializer::deserialize(uintptr_t raw)
+int main()
 {
-	return (reinterpret_cast <Data *> (raw));
+	std::srand(time(NULL));
+	Base *base = generate();
+	identify(base);
+	identify(*base);
+	delete base;
+	return (0);
 }

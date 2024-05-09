@@ -6,14 +6,14 @@
 #    By: mcutura <mcutura@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/25 07:01:42 by mcutura           #+#    #+#              #
-#    Updated: 2024/05/09 19:39:40 by mcutura          ###   ########.fr        #
+#    Updated: 2024/05/09 20:10:14 by mcutura          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := serialize
-SRCS := main.cpp Serializer.cpp
+NAME := identify
+SRCS := main.cpp Base.cpp
 OBJS := $(SRCS:%.cpp=%.o)
-HDRS := Serializer.hpp
+HDRS := Base.hpp
 
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98 -Wpedantic
