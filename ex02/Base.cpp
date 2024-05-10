@@ -6,17 +6,17 @@
 /*   By: mcutura <mcutura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 00:53:35 by mcutura           #+#    #+#             */
-/*   Updated: 2024/05/09 20:36:36 by mcutura          ###   ########.fr       */
+/*   Updated: 2024/05/10 10:44:27 by mcutura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Base.hpp"
 #include <cstddef>
 #include <exception>
 
-Base	* generate(void)
+#include "Base.hpp"
+
+Base	* generate(int i)
 {
-	int i = rand() % 3;
 	if (!i)
 	{
 		std::cout << "Generated A" << std::endl;

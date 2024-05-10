@@ -6,7 +6,7 @@
 /*   By: mcutura <mcutura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 00:51:46 by mcutura           #+#    #+#             */
-/*   Updated: 2024/05/09 20:11:10 by mcutura          ###   ########.fr       */
+/*   Updated: 2024/05/10 10:34:37 by mcutura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ class B : public Base {};
 class C : public Base {};
 
 
-Base	* generate(void);
+Base	* generate(int i);
 void	identify(Base* p);
 void	identify(Base& p);
